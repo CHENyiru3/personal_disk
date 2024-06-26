@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JSP Example</title>
+</head>
+<body>
+    <h1>Hello, JSP!</h1>
+
+    <%-- This is a JSP scriptlet, where we can write Java code --%>
+    <%
+        String name = "John Doe";
+        int age = 30;
+    %>
+
+    <%-- We can output the values of variables using JSP expressions --%>
+    <p>Name: <%= name %></p>
+    <p>Age: <%= age %></p>
+
+    <%-- We can also use Java code to generate dynamic content --%>
+    <% if (age >= 18) { %>
+        <p>You are an adult.</p>
+    <% } else { %>
+        <p>You are a minor.</p>
+    <% } %>
+</body>
+</html>

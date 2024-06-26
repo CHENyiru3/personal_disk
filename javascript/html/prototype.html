@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #add8e6, #486548); /* Add a gradient background */
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #f5f5f5;
+            padding: 20px;
+            box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.2); /* Add a shadow to the sidebar */
+        }
+        .main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .output {
+            border: 2px solid #ccc; /* Make the border thicker */
+            padding: 20px;
+            min-height: 200px;
+            background-color: white; /* Change the background color to white */
+            overflow: auto; /* Add scrollbars if necessary */
+        }
+        #uploadButton {
+            transition: background-color 0.5s ease; /* Add a transition effect */
+        }
+        #uploadButton:hover {
+            background-color: #add8e6; /* Change the background color when hovering */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#about" target="_self" onclick="showContent('about')">ZJE DST2 GROUP4</a></li>
+            <li><a href="#query" target="_self" onclick="showContent('query')">query</a></li>
+            <li><a href="#database" target="_self" onclick="showContent('database')">database</a></li>
+            <li><a href="#drug" target="_self" onclick="showContent('drug')">drug</a></li>
+            <li><a href="#clinical" target="_self" onclick="showContent('clinical')">clinical</a></li>
+            <li><a href="#variant" target="_self" onclick="showContent('variant')">variant</a></li>
+            <li><a href="#document" target="_self" onclick="showContent('document')">document</a></li>
+        </ul>
+    </div>
+    <div class="main" id="about">
+        <h2>About</h2>
+        <p>This is a web application for querying drug based on variant annotation file. The application is developed by ZJE DST2 GROUP4.</p>
+    </div>
+    <div class="main" id="databse">
+        <h2>Database</h2>
+        <p>Here you can find the information of the database used in this application.</p>
+        <table>
+            <tr>
+                <th>Some information</th>
+                <th>Information</th>
+                <th>Link</th>
+            </tr> 
+            <tr>
+                <td>Variant 1</td>
+                <td>Information 1</td>
+                <td><a href="#">Link 1</a></td>
+            </tr>
+            <tr>
+                <td>Variant 2</td>
+                <td>Information 2</td>
+                <td><a href="#">Link 2</a></td>
+            </tr>
+            <tr>
+                <td>Variant 3</td>
+                <td>Information 3</td>
+                <td><a href="#">Link 3</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="main" id = "drug">
+        <h2>Drug</h2>
+        <p>Here you can find the information of the drug used in this application.</p>
+        <table>
+            <tr>
+                <th>Drug</th>
+                <th>Information</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Drug 1</td>
+                <td>Information 1</td>
+                <td><a href="#">Link 1</a></td>
+            </tr>
+            <tr>
+                <td>Drug 2</td>
+                <td>Information 2</td>
+                <td><a href="#">Link 2</a></td>
+            </tr>
+            <tr>
+                <td>Drug 3</td>
+                <td>Information 3</td>
+                <td><a href="#">Link 3</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="main" id = "clinical">
+        <h2>Clinical</h2>
+        <p>Here you can find the information of the clinical used in this application.</p>
+        <table>
+            <tr>
+                <th>Clinical</th>
+                <th>Information</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Clinical 1</td>
+                <td>Information 1</td>
+                <td><a href="#">Link 1</a></td>
+            </tr>
+            <tr>
+                <td>Clinical 2</td>
+                <td>Information 2</td>
+                <td><a href="#">Link 2</a></td>
+            </tr>
+            <tr>
+                <td>Clinical 3</td>
+                <td>Information 3</td>
+                <td><a href="#">Link 3</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="main" id = "variant">
+        <h2>Variant</h2>
+        <p>Here you can find the information of the variant used in this application.</p>
+        <table>
+            <tr>
+                <th>Variant</th>
+                <th>Information</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Variant 1</td>
+                <td>Information 1</td>
+                <td><a href="#">Link 1</a></td>
+            </tr>
+            <tr>
+                <td>Variant 2</td>
+                <td>Information 2</td>
+                <td><a href="#">Link 2</a></td>
+            </tr>
+            <tr>
+                <td>Variant 3</td>
+                <td>Information 3</td>
+                <td><a href="#">Link 3</a></td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="main" id="document">
+        <h2>Document</h2>
+        <p>Here you can find the information of the document used in this application.</p>
+     </div>
+    <div class="main" id="query">
+        <h2>Query</h2>
+        <form id="uploadForm">
+            <input type="file" id="file" name="file" accept=".tsv" style="display: none;">
+            <button type="button" id="uploadButton" title="Please input the required format .tsv file">Upload and Submit</button>
+            <p>Here you can select variant annotation file(.tsv file) from your own computor and query corresponding drug</p>
+        </form>
+        <h3>Output</h3>
+        <button type="button" title="Download the result file">Download result</button>
+        <div class="output">
+            <table>
+                <tr>
+                    <th>Variant</th>
+                    <th>Drug</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Variant 1</td>
+                    <td>Drug 1</td>
+                    <td><a href="#">Link 1</a></td>
+                </tr>
+                <tr>
+                    <td>Variant 2</td>
+                    <td>Drug 2</td>
+                    <td><a href="#">Link 2</a></td>
+                </tr>
+                <tr>
+                    <td>Variant 3</td>
+                    <td>Drug 3</td>
+                    <td><a href="#">Link 3</a></td>
+                </tr>
+                <tr>
+                    <td>Variant 4</td>
+                    <td>Drug 4</td>
+                    <td><a href="#">Link 4</a></td>
+                </tr>
+                <tr>
+                    <td>Variant 5</td>
+                    <td>Drug 5</td>
+                    <td><a href="#">Link 5</a></td>
+                </tr>
+                <tr>
+                    <td>Variant 6</td>
+                    <td>Drug 6</td>
+                    <td><a href="#">Link 6</a></td>
+                </tr>
+                <tr>
+                    <td>Variant 7</td>
+                    <td>Drug 7</td>
+                    <td><a href="#">Link 7</a></td>
+                </tr>
+                <tr>
+                    <td>Variant 8</td>
+                    <td>Drug 8</td>
+                    <td><a href="#">Link 8</a></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <script>
+        function showContent(id) {
+            var sections = document.getElementsByClassName('main');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none'; // Hide all sections
+            }
+            document.getElementById(id).style.display = 'block'; // Show the selected section
+        }
+
+
+        // Show the section specified in the URL hash on page load
+
+        var hash = window.location.hash.substring(1); // Get the hash, excluding the '#'
+        if (hash) {
+            showContent(hash);
+        } else {
+            showContent('about'); // Show 'about' section by default
+        }
+        
+        document.getElementById('uploadButton').addEventListener('click', function() {
+            document.getElementById('file').click();
+        });
+
+        document.getElementById('file').addEventListener('change', function() {
+            if (this.value) {
+                document.getElementById('uploadForm').submit();
+            }
+        });
+    </script>
+</body>
+</html>
