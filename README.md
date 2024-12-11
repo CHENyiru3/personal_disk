@@ -21,18 +21,7 @@ just my staffs....
 └── reference_based_module
     ├── Datasets_Ref
     │   ├── Maize_transposon
-    │   │   ├── DNA_DTA.txt
-    │   │   ├── DNA_DTC.txt
-    │   │   ├── DNA_DTH.txt
-    │   │   ├── DNA_DTM.txt
-    │   │   └── DNA_DTT.txt
     │   └── Plant_tranpoases
-    │       ├── Tpase_DTA.fasta
-    │       ├── Tpase_DTC.fasta
-    │       ├── Tpase_DTH.fasta
-    │       ├── Tpase_DTM.fasta
-    │       ├── Tpase_DTT.fasta
-    │       └── Tpase_all.fasta
     ├── GFFEntry_class.py
     ├── architecture_identification.py
     ├── blast_search.py
